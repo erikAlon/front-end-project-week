@@ -1,11 +1,14 @@
-import React, { Component } from "react";
-import "./App.css";
-import SideBar from "./components/SideBar";
-import { Route } from "react-router-dom";
-import ListView from "./components/ListView";
-import CreateNewView from "./components/CreateNewView";
-import NoteView from "./components/NoteView";
-import EditView from "./components/EditView";
+import React, { Component } from 'react';
+import './App.css';
+import SideBar from './components/SideBar';
+import { Route } from 'react-router-dom';
+import ListView from './components/ListView';
+import CreateNewView from './components/CreateNewView';
+import NoteView from './components/NoteView';
+import EditView from './components/EditView';
+import SigninView from './components/SigninView';
+import RegistrationView from './components/RegistrationView';
+import axios from 'axios';
 
 class App extends Component {
   render() {
@@ -16,6 +19,8 @@ class App extends Component {
         <Route path="/createnewview" component={CreateNewView} />
         <Route path="/noteview" component={NoteView} />
         <Route path="/editview" component={EditView} />
+        <Route path="/signinview" component={SigninView} />
+        <Route path="/registrationview" component={RegistrationView} />
       </div>
     );
   }
@@ -26,3 +31,7 @@ export default App;
 // Route set up for components
 
 // styling example used in style property ex: style={{ display: "flex" }}
+
+/*
+  How do I save the data after useing my API to post a user?
+*/
